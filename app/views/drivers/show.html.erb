@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<h4><i class="fa fa-truck fa-3x"></i> <%= @driver.code %></h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>adı_soyadı</th>
+      <td><%= @driver.adı_soyadı %></td>
+    </tr>
+    <tr>
+      <th>dogum_tarihi</th>
+      <td><%= @driver.dogum_tarihi %></td>
+    </tr>
+    <tr>
+      <th>tc_kimlik_no</th>
+      <td><%= @driver.tc_kimlik_no %></td>
+    </tr>
+    <tr>
+      <th>telefon</th>
+      <td><%= @driver.telefon %></td>
+    </tr>
+    <tr>
+      <th>adres</th>
+      <td><%= @driver.adres %></td>
+      <th></th>
+      <td></td>
+    </tr>
+  </thead>
+</table>
+<p>
+  <%= link_to 'Update', @driver %>
+  <%= link_to 'Edit', edit_driver_path(@driver) %> |
+  <%= link_to 'Back', drivers_path %>
+</p>
+<h5>Yorumlar</h5>
+<tr>
+  <td> <%= show.label :adı_soyadı %></td>
+  <td> <%= show.text_field : Yorumlar %></td>
+</tr>
+<p>
+<%= link_to 'Send', send_driver_path(@driver) %>
+</p>

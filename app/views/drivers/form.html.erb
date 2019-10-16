@@ -1,0 +1,34 @@
+<%= form_for(driver) do |form| %>
+<% if driver.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
+<ul>
+<% driver.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<div class="row">
+<div class="col-md-3">
+<%= form.label :adı_soyadı %>
+<%= form.text_field :adı_soyadı %>
+</div>
+<div class="col-md-3">
+<%= form.label :dogum_tarihi %>
+<%= form.text_field :dogum_tarihi %>
+</div>
+<div class="col-md-3">
+<%= form.label :tc_kimlik_no %>
+<%= form.text_field :tc_kimlik_no %>
+</div>
+<div class="col-md-3">
+<%= form.label :telefon %>
+<%= form.text_field :telefon %>
+</div>
+
+<div class="col-md-3">
+<%= form.label :adres %>
+<%= form.text_field :adres %>
+</div>
+<% end %>
